@@ -58,7 +58,7 @@ function welcomeClick(x) {
 // this function populates the page with random coloured blocks with each click
 
 function createEmptyBlocks() {
-  for (i = 0; i < 700; i++) {
+  for (i = 0; i < 1000; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
@@ -74,7 +74,7 @@ function reCreateEmptyBlocks() {
   coloredBlocks.forEach((x) => {
     x.remove()
   })
-  for (i = 0; i < 2000; i++) {
+  for (i = 0; i < 3200; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
@@ -118,7 +118,7 @@ function prepareCanvas() {
   coloredBlocks.forEach((x) => {
     x.remove()
   })
-  for (i = 0; i < 2000; i++) {
+  for (i = 0; i < 3100; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
