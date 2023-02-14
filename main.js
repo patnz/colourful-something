@@ -1,11 +1,6 @@
-// Function to create and add an empty div element with the class 'empty-block' to the #page-container element
+// This code stops context menu from appearing on right-click
 
-// function createEmptyBlock() {
-//   const emptyBlock = document.createElement('div')
-//   emptyBlock.classList.add('empty-block')
-//   console.log(emptyBlock)
-//   document.getElementById('page-wrapper').appendChild(emptyBlock)
-// }
+window.addEventListener('contextmenu', (e) => e.preventDefault())
 
 const pageWrapper = document.getElementById('page-wrapper')
 const firstSelectionBox = document.getElementById('selector-box-1')
@@ -122,8 +117,9 @@ function prepareCanvas() {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
-    emptyBlock.addEventListener('click', (e) => paintBlock(e.target))
-    emptyBlock.style.backgroundColor = pickedColor1
+    emptyBlock.addEventListener('click', (e) => paintBlock1(e.target))
+    emptyBlock.addEventListener('contextmenu', (e) => paintBlock2(e.target))
+    emptyBlock.style.backgroundColor = 'black'
     selectorPopUp.style.visibility = 'hidden'
   }
 }
@@ -131,8 +127,13 @@ function prepareCanvas() {
 // This function paints each block with the second colour selection when clicked
 // It also randomises the page background with each click
 
-function paintBlock(x) {
-  x.style.backgroundColor = pickedColor2
+function paintBlock1(x) {
+  x.style.backgroundColor = pickedColor1
   document.getElementById('page-wrapper').style.backgroundColor =
     '#' + Math.floor(Math.random() * 16777215).toString(16)
+}
+
+function paintBlock2(x) {
+  x.style.backgroundColor = pickedColor2
+  document.getElementById('page-wrapper').style.backgroundColor = pickedColor2
 }
