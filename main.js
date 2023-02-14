@@ -9,7 +9,7 @@ const selectionText = document.getElementById('select-text')
 const closeWindowText = document.getElementById('close-window-text')
 let pickedColor1
 let pickedColor2
-let welcomeClickCount = 6
+let welcomeClickCount = 11
 
 // THIS CODE DECLARES VARIABLE 'firstPopUp' FOR FIRST POP UP
 // IT THEN GIVES IT SOME TEXT
@@ -29,7 +29,7 @@ const selectorPopUp = document.getElementById('selector-pop-up')
 // IT THEN MAKES THE SECOND POP UP APPEAR, AND ADDS TEXT.
 
 function welcomeClick(x) {
-  if (welcomeClickCount >= 5) {
+  if (welcomeClickCount >= 10) {
     welcomeClickCount--
     firstPopUp.innerHTML = welcomeClickCount
     firstPopUp.style.lineHeight = '100px'
