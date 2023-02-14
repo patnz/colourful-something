@@ -53,7 +53,7 @@ function welcomeClick(x) {
 // this function populates the page with random coloured blocks with each click
 
 function createEmptyBlocks() {
-  for (i = 0; i < 1200; i++) {
+  for (i = 0; i < 1500; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
@@ -69,7 +69,7 @@ function reCreateEmptyBlocks() {
   coloredBlocks.forEach((x) => {
     x.remove()
   })
-  for (i = 0; i < 3200; i++) {
+  for (i = 0; i < 4000; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
@@ -113,14 +113,15 @@ function prepareCanvas() {
   coloredBlocks.forEach((x) => {
     x.remove()
   })
-  for (i = 0; i < 3100; i++) {
+  for (i = 0; i < 4000; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
     emptyBlock.addEventListener('click', (e) => paintBlock1(e.target))
     emptyBlock.addEventListener('contextmenu', (e) => paintBlock2(e.target))
-    emptyBlock.style.backgroundColor = 'black'
+    emptyBlock.style.backgroundColor = 'oldlace'
     selectorPopUp.style.visibility = 'hidden'
+    pageWrapper.style.backgroundColor = 'oldlace'
   }
 }
 
@@ -129,11 +130,12 @@ function prepareCanvas() {
 
 function paintBlock1(x) {
   x.style.backgroundColor = pickedColor1
-  document.getElementById('page-wrapper').style.backgroundColor =
-    '#' + Math.floor(Math.random() * 16777215).toString(16)
+  // document.getElementById('page-wrapper').style.backgroundColor =
+  //   '#' + Math.floor(Math.random() * 16777215).toString(16)
 }
 
 function paintBlock2(x) {
   x.style.backgroundColor = pickedColor2
-  document.getElementById('page-wrapper').style.backgroundColor = pickedColor2
+  // document.getElementById('page-wrapper').style.backgroundColor =
+  //   '#' + Math.floor(Math.random() * 16777215).toString(16)
 }
