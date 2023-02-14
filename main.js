@@ -113,15 +113,16 @@ function prepareCanvas() {
   coloredBlocks.forEach((x) => {
     x.remove()
   })
+  selectorPopUp.style.visibility = 'hidden'
+  pageWrapper.style.backgroundColor = '#F7F5F3'
   for (i = 0; i < 4000; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
     emptyBlock.addEventListener('click', (e) => paintBlock1(e.target))
     emptyBlock.addEventListener('contextmenu', (e) => paintBlock2(e.target))
-    emptyBlock.style.backgroundColor = 'oldlace'
-    selectorPopUp.style.visibility = 'hidden'
-    pageWrapper.style.backgroundColor = 'oldlace'
+    emptyBlock.style.backgroundColor = '#F7F5F3'
+    emptyBlock.style.border = '1px solid #D6CCC2'
   }
 }
 
