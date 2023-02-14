@@ -23,9 +23,11 @@ function createEmptyBlock() {
       // IF BOTH COLOURS HAVE BEEN SELECTED...
       document.getElementById('pop-up-alert-1').style.visibility = 'hidden'
       document.getElementById('pop-up-alert-2').style.visibility = 'hidden'
-
       e.target.style.backgroundColor = pickedColor1
+      e.target.style.border = '0px'
       emptyBlock.style.backgroundColor = pickedColor2
+      console.log(pickedColor1)
+      console.log(pickedColor2)
     } else if (pickedColor1 == null) {
       // IF FIRST COLOUR HAS NOT BEEN SELECTED...
       document.getElementById('pop-up-alert-0').style.visibility = 'hidden'
@@ -46,6 +48,7 @@ function createEmptyBlock() {
         'CLICK ANYWHERE TO CONTINUE'
       pickedColor2 = e.target.style.backgroundColor
       emptyBlock.style.backgroundColor = pickedColor2
+      pageWrapper.style.backgroundColor = pickedColor2
       document.getElementById('alert2-color1-box').style.backgroundColor =
         pickedColor1
       document.getElementById('alert2-color2-box').style.backgroundColor =
@@ -61,7 +64,7 @@ function createEmptyBlock() {
 
 // For loop to
 
-for (i = 0; i < 5000; i++) {
+for (i = 0; i < 3000; i++) {
   createEmptyBlock()
 }
 
