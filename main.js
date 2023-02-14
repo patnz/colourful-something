@@ -58,7 +58,7 @@ function welcomeClick(x) {
 // this function populates the page with random coloured blocks with each click
 
 function createEmptyBlocks() {
-  for (i = 0; i < 1000; i++) {
+  for (i = 0; i < 1200; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
