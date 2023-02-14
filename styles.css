@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#page-wrapper {
+  background-color: black;
+  position: absolute;
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.empty-block {
+  border: 1px black solid;
+  margin: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+#pop-up-alert-1 {
+/* box styling */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  height: 250px;
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+     transform: translate(-50%,-50%);
+/* font styling */
+  text-align: center;
+  visibility: hidden;
+}
+
+h2 {
+  visibility: inherit;
+  margin: 0;
+  line-height: 60px;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  visibility: inherit;
+  margin: 0;
+  line-height: 250px;
+  width: 100%;
+  height: 100%;
+}
+
+#colors-container {
+  visibility: inherit;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+  flex-direction: row;
+}
+
+#alert1-color1-box, #alert1-color2-box, #alert2-color1-box, #alert2-color2-box {
+  visibility: inherit;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#pop-up-alert-0 {
+  /* box styling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 50vw;
+    height: 250px;
+    border-radius: 10px;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+      top: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -moz-transform:translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+       transform: translate(-50%,-50%);
+    visibility: visible;
+  
+  /* font styling */
+    text-align: center;
+  }
+
+#pop-up-alert-2 {
+  /* box styling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 50vw;
+    height: 250px;
+    border-radius: 10px;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+      top: 50%;
+      -ms-transform: translate(-50%,-50%);
+      -moz-transform:translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+       transform: translate(-50%,-50%);
+    visibility: hidden;
+  
+  /* font styling */
+    text-align: center;
+  }
