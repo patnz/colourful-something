@@ -3,6 +3,10 @@
   /* border: 1px solid black; */
 }
 
+iframe {
+  visibility: hidden;
+}
+
 body {
   cursor: pointer;
   font-family: courier;
