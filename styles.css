@@ -4,6 +4,8 @@
 }
 
 body {
+  cursor: pointer;
+  font-family: courier;
   margin: 0;
   background-color: black;
 }
@@ -29,16 +31,13 @@ body {
   border-radius: 3px;
 }
 
-#pop-up-alert-1 {
-/* box styling */
+#first-pop-up, #selector-pop-up {
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
-  height: 250px;
   border-radius: 10px;
-  background-color: white;
+  background-color: oldlace;
   position: fixed;
   left: 50%;
     top: 50%;
@@ -46,40 +45,44 @@ body {
     -moz-transform:translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
      transform: translate(-50%,-50%);
-/* font styling */
   text-align: center;
+}
+
+#selector-pop-up {
+  width: 330px;
+  height: 210px;
   visibility: hidden;
+}
+
+#first-pop-up {
+  width: 30vw;
+  height: 100px;
+  line-height: 25px;
+  visibility: visible;
 }
 
 h2 {
   visibility: inherit;
   margin: 0;
-  line-height: 60px;
+  line-height: 70px;
   width: 100%;
   height: 100%;
 }
 
-h1 {
-  visibility: inherit;
-  margin: 0;
-  line-height: 250px;
-  width: 100%;
-  height: 100%;
-}
 
 #colors-container {
   visibility: inherit;
   width: 100%;
-  height: 100%;
+  height: 70px;
   padding-bottom: 20px;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 10px;
   gap: 20px;
   flex-direction: row;
 }
 
-#alert1-color1-box, #alert1-color2-box, #alert2-color1-box, #alert2-color2-box {
+#selector-box-1, #selector-box-2 {
   visibility: inherit;
   height: 50px;
   width: 50px;
@@ -88,48 +91,3 @@ h1 {
   border-radius: 5px;
 }
 
-#pop-up-alert-0 {
-  /* box styling */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    width: 50vw;
-    height: 250px;
-    border-radius: 10px;
-    background-color: white;
-    position: fixed;
-    left: 50%;
-      top: 50%;
-      -ms-transform: translate(-50%,-50%);
-      -moz-transform:translate(-50%,-50%);
-      -webkit-transform: translate(-50%,-50%);
-       transform: translate(-50%,-50%);
-    visibility: visible;
-  
-  /* font styling */
-    text-align: center;
-  }
-
-#pop-up-alert-2 {
-  /* box styling */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    width: 50vw;
-    height: 250px;
-    border-radius: 10px;
-    background-color: white;
-    position: fixed;
-    left: 50%;
-      top: 50%;
-      -ms-transform: translate(-50%,-50%);
-      -moz-transform:translate(-50%,-50%);
-      -webkit-transform: translate(-50%,-50%);
-       transform: translate(-50%,-50%);
-    visibility: hidden;
-  
-  /* font styling */
-    text-align: center;
-  }
