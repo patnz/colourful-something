@@ -7,14 +7,34 @@ iframe {
   visibility: hidden;
 }
 
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 body {
+  /* /// */
+  z-index: 0;
+  /* /// */
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
   cursor: pointer;
   font-family: courier;
   margin: 0;
-  background-color: black;
 }
 
 #page-wrapper {
+  z-index: 1;
   background-color: black;
   position: absolute;
   padding: 5px;
@@ -27,6 +47,9 @@ body {
 }
 
 .empty-block {
+  z-index: 3;
+  position: static;
+  scroll-behavior: ;
   border: 1px black solid;
   margin: 2px;
   display: inline-block;
@@ -36,7 +59,7 @@ body {
 }
 
 #first-pop-up, #selector-pop-up {
-  z-index: 1;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,12 +76,14 @@ body {
 }
 
 #selector-pop-up {
+  z-index: 4;
   width: 330px;
   height: 210px;
   visibility: hidden;
 }
 
 #first-pop-up {
+  z-index: 4;
   width: 250px;
   height: 100px;
   line-height: 25px;

@@ -114,16 +114,26 @@ function prepareCanvas() {
     x.remove()
   })
   selectorPopUp.style.visibility = 'hidden'
-  pageWrapper.style.backgroundColor = '#F7F5F3'
+  pageWrapper.style.background =
+    `linear-gradient(-180deg, ` +
+    pickedColor2.toString() +
+    ', ' +
+    pickedColor1.toString() +
+    ', ' +
+    pickedColor2.toString() +
+    ')'
+  pageWrapper.style.zIndex = '4'
+  pageWrapper.style.animation = 'gradient 15s ease infinite;'
   for (i = 0; i < 4000; i++) {
     const emptyBlock = document.createElement('div')
     document.getElementById('page-wrapper').appendChild(emptyBlock)
     emptyBlock.classList.add('empty-block')
-    emptyBlock.addEventListener('click', (e) => paintBlock1(e.target))
+    emptyBlock.addEventListener('mouseover', (e) => deleteBlock(e.target))
     emptyBlock.addEventListener('contextmenu', (e) => paintBlock2(e.target))
     emptyBlock.style.backgroundColor = '#F7F5F3'
     emptyBlock.style.border = '1px solid #D6CCC2'
   }
+  ///
 }
 
 // This function paints each block with the second colour selection when clicked
@@ -139,4 +149,10 @@ function paintBlock2(x) {
   x.style.backgroundColor = pickedColor2
   // document.getElementById('page-wrapper').style.backgroundColor =
   //   '#' + Math.floor(Math.random() * 16777215).toString(16)
+}
+
+// this function deletes the target block
+
+function deleteBlock(x) {
+  x.style.visibility = 'hidden'
 }
