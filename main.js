@@ -139,11 +139,11 @@ function prepareCanvas() {
 // This function paints each block with the second colour selection when clicked
 // It also randomises the page background with each click
 
-function paintBlock1(x) {
-  x.style.backgroundColor = pickedColor1
-  // document.getElementById('page-wrapper').style.backgroundColor =
-  //   '#' + Math.floor(Math.random() * 16777215).toString(16)
-}
+// function paintBlock1(x) {
+//   x.style.backgroundColor = pickedColor1
+//   // document.getElementById('page-wrapper').style.backgroundColor =
+//   //   '#' + Math.floor(Math.random() * 16777215).toString(16)
+// }
 
 function paintBlock2(x) {
   x.style.backgroundColor = pickedColor2
