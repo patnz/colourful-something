@@ -49,7 +49,6 @@ body {
 .empty-block {
   z-index: 3;
   position: static;
-  scroll-behavior: ;
   border: 1px black solid;
   margin: 2px;
   display: inline-block;
