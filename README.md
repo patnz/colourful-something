@@ -5,7 +5,11 @@ this is a pointless webpage built by yours truly
 ---
 ### why?
 
-yes. i agree. 'why?' indeed. ummmmmmmm.. really good question! ummm.... practice? trying to build things with JavaScript and minimal HTML 
+'why?' indeed... 
+
+practice? 
+
+trying to build things with JavaScript and minimal HTML 
 
 ---
 ### what?
